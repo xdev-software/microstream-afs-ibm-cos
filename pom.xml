@@ -20,7 +20,7 @@
 		<maven.compiler.release>${javaVersion}</maven.compiler.release>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<one.microstream.version>09.00.00-MS-GA-SNAPSHOT</one.microstream.version>
+		<one.microstream.version>08.01.01-MS-GA</one.microstream.version>
 	</properties>
 
 	<modules>

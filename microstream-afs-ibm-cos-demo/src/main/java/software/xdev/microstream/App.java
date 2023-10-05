@@ -17,13 +17,18 @@ import com.ibm.cloud.objectstorage.services.s3.AmazonS3ClientBuilder;
 import one.microstream.afs.blobstore.types.BlobStoreFileSystem;
 import one.microstream.storage.embedded.types.EmbeddedStorage;
 import one.microstream.storage.embedded.types.EmbeddedStorageManager;
-import one.microstream.storage.types.Storage;
-import one.microstream.storage.types.StorageLiveFileProvider;
 import software.xdev.microstream.afs.ibm.cos.types.CosConnector;
 
 
 public class App
 {
+	private static final String COS_ENDPOINT = ""; // eg "https://s3.us.cloud-object-storage.appdomain.cloud"
+	private static final String COS_API_KEY_ID = ""; // eg "0viPHOY7LbLNa9eLftrtHPpTjoGv6hbLD1QalRXikliJ"
+	private static final String COS_SERVICE_CRN = "";
+		// "crn:v1:bluemix:public:cloud-object-storage:global:a/<CREDENTIAL_ID_AS_GENERATED>:<SERVICE_ID_AS_GENERATED
+		// >::"
+	private static final String COS_BUCKET_LOCATION = "";  // eg "us"
+	private static final String BUCKET_NAME = "";
 	
 	private static final Logger LOG = LoggerFactory.getLogger(App.class);
 	
@@ -49,18 +54,9 @@ public class App
 			CosConnector.Caching(client)
 		);
 		
-		return EmbeddedStorage.Foundation(
-				Storage.ConfigurationBuilder()
-					.setChannelCountProvider(Storage.ChannelCountProvider(4))
-					.setStorageFileProvider(
-						StorageLiveFileProvider.Builder()
-							.setDirectory(cloudFileSystem.ensureDirectoryPath(BUCKET_NAME))
-							.createFileProvider()
-					)
-					.createConfiguration()
-			)
-			.setRoot(root)
-			.start();
+		return EmbeddedStorage.start(
+			root,
+			cloudFileSystem.ensureDirectoryPath(BUCKET_NAME));
 	}
 	
 	public static AmazonS3 createClient(
