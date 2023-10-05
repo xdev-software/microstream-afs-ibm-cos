@@ -36,14 +36,21 @@ public class App
 	{
 		final List<String> stringList = new ArrayList<>();
 		LOG.info("List size before loading: {}", stringList.size());
+		LOG.info("Loading datastore...");
 		try(final EmbeddedStorageManager manager = getStorageManager(stringList))
 		{
+			LOG.info("Done loading datastore.");
+			LOG.info("List size after loading: {}", stringList.size());
 			for(int i = 0; i < 1_000_000; i++)
 			{
 				stringList.add("Test" + i);
 			}
+			LOG.info("Storing entries...");
 			manager.store(stringList);
+			LOG.info("Done storing entries.");
+			LOG.info("List size after storing: {}", stringList.size());
 		}
+		LOG.info("Datastore closed.");
 	}
 	
 	public static EmbeddedStorageManager getStorageManager(final Object root)
