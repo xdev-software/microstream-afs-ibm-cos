@@ -1,38 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.xdev-software</groupId>
-	<artifactId>microstream-afs-ibm-cos-root</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <groupId>com.xdev-software</groupId>
+    <artifactId>microstream-afs-ibm-cos-root</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-	<organization>
-		<name>XDEV Software</name>
-		<url>https://xdev.software</url>
-	</organization>
+    <organization>
+        <name>XDEV Software</name>
+        <url>https://xdev.software</url>
+    </organization>
 
-	<properties>
-		<!-- Keep this compatible with EclipseStore -->
-		<javaVersion>11</javaVersion>
-		<maven.compiler.release>${javaVersion}</maven.compiler.release>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<one.microstream.version>08.01.01-MS-GA</one.microstream.version>
-	</properties>
+    <modules>
+        <module>microstream-afs-ibm-cos</module>
+        <module>microstream-afs-ibm-cos-demo</module>
+    </modules>
 
-	<modules>
-		<module>microstream-afs-ibm-cos</module>
-		<module>microstream-afs-ibm-cos-demo</module>
-	</modules>
-
-	<licenses>
-		<license>
-			<name>Apache License, Version 2.0</name>
-			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 </project>
