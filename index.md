@@ -21,7 +21,7 @@ but for IBM COS instead of AWS S3.
 ## Supported MicroStream versions
 
 The connector supports
-[version 08.01.01-MS-GA of the MicroStream](https://central.sonatype.dev/artifact/one.microstream/microstream-storage/08.01.01-MS-Ghttps://central.sonatype.dev/artifact/one.microstream/microstream-storage/08.01.01-MS-GA).
+[version 08.01.01-MS-GA of the MicroStream](https://central.sonatype.com/artifact/one.microstream/microstream-storage/08.01.01-MS-GA).
 
 If you are using a different, not listed version of MicroStream, this shouldn't be a problem.
 Usually you can simply exclude the dependent version of MicroStream.
