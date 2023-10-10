@@ -32,25 +32,21 @@ public class App
 	
 	private static final Logger LOG = LoggerFactory.getLogger(App.class);
 	
+	/**
+	 * This function connects to the IBM COS and writes one million String-Entries on it.
+	 */
 	public static void main(final String[] args)
 	{
 		final List<String> stringList = new ArrayList<>();
 		LOG.info("List size before loading: {}", stringList.size());
-		LOG.info("Loading datastore...");
 		try(final EmbeddedStorageManager manager = getStorageManager(stringList))
 		{
-			LOG.info("Done loading datastore.");
-			LOG.info("List size after loading: {}", stringList.size());
 			for(int i = 0; i < 1_000_000; i++)
 			{
 				stringList.add("Test" + i);
 			}
-			LOG.info("Storing entries...");
 			manager.store(stringList);
-			LOG.info("Done storing entries.");
-			LOG.info("List size after storing: {}", stringList.size());
 		}
-		LOG.info("Datastore closed.");
 	}
 	
 	public static EmbeddedStorageManager getStorageManager(final Object root)
@@ -76,13 +72,11 @@ public class App
 		final ClientConfiguration clientConfig = new ClientConfiguration().withRequestTimeout(-1);
 		clientConfig.setUseTcpKeepAlive(true);
 		
-		final AmazonS3 cos = AmazonS3ClientBuilder.standard()
+		return AmazonS3ClientBuilder.standard()
 			.withCredentials(new AWSStaticCredentialsProvider(credentials))
 			.withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(endpoint_url, location))
 			.withPathStyleAccessEnabled(true)
 			.withClientConfiguration(clientConfig)
 			.build();
-		
-		return cos;
 	}
 }

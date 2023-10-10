@@ -15,13 +15,13 @@
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
-	<name>eclipse-store-afs-ibm-cos</name>
-	<description>eclipse-store-afs-ibm-cos</description>
-	<url>https://github.com/xdev-software/eclipse-store-afs-ibm-cos</url>
+	<name>microstream-afs-ibm-cos</name>
+	<description>microstream-afs-ibm-cos</description>
+	<url>https://github.com/xdev-software/microstream-afs-ibm-cos</url>
 
 	<scm>
-		<url>https://github.com/xdev-software/eclipse-store-afs-ibm-cos</url>
-		<connection>https://github.com/xdev-software/eclipse-store-afs-ibm-cos.git</connection>
+		<url>https://github.com/xdev-software/microstream-afs-ibm-cos</url>
+		<connection>https://github.com/xdev-software/microstream-afs-ibm-cos.git</connection>
 	</scm>
 
 	<inceptionYear>2023</inceptionYear>
