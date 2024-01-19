@@ -19,6 +19,8 @@ import java.util.regex.Pattern;
 
 import one.microstream.afs.blobstore.types.BlobStorePath;
 
+
+@SuppressWarnings("checkstyle:MethodName") // MS Naming
 public interface CosPathValidator extends BlobStorePath.Validator
 {
 	static CosPathValidator New()
@@ -44,6 +46,7 @@ public interface CosPathValidator extends BlobStorePath.Validator
 		/*
 		 * https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-compatibility-api-bucket-operations
 		 */
+		@SuppressWarnings("checkstyle:MagicNumber")
 		void validateBucketName(
 			final String bucketName
 		)
