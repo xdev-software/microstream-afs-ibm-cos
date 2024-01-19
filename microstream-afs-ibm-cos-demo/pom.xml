@@ -31,7 +31,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>software.xdev</groupId>
-			<artifactId>standard-maven-template</artifactId>
+			<artifactId>microstream-afs-ibm-cos</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
