@@ -1,18 +1,14 @@
-[![Latest version](https://img.shields.io/maven-central/v/com.xdev-software/microstream-afs-ibm-cos?logo=apache%20maven)](https://mvnrepository.com/artifact/com.xdev-software/microstream-afs-ibm-cos)
+[![Latest version](https://img.shields.io/maven-central/v/software.xdev/microstream-afs-ibm-cos?logo=apache%20maven)](https://mvnrepository.com/artifact/software.xdev/microstream-afs-ibm-cos)
 [![Build](https://img.shields.io/github/actions/workflow/status/xdev-software/microstream-afs-ibm-cos/checkBuild.yml?branch=develop)](https://github.com/xdev-software/microstream-afs-ibm-cos/actions/workflows/checkBuild.yml?query=branch%3Adevelop)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=xdev-software_microstream-afs-ibm-cos&metric=alert_status)](https://sonarcloud.io/dashboard?id=xdev-software_microstream-afs-ibm-cos)
 
 # microstream-afs-ibm-cos
 
-A connector for [MicroStream](https://microstream.one/) which allows storing data in
-the [IBM Cloud Object Storage](https://www.ibm.com/cloud/object-storage).
+A connector for [MicroStream](https://microstream.one/) which allows storing data in the [IBM Cloud Object Storage](https://www.ibm.com/cloud/object-storage).
 
 It uses the [IBM-provided Java SDK](https://github.com/IBM/ibm-cos-sdk-java).
 
-The connector works virtually identical to
-the [AWS S3 Connector](https://docs.microstream.one/manual/storage/storage-targets/blob-stores/aws-s3.html) of
-MicroStream
-but for IBM COS instead of AWS S3.
+The connector works virtually identical to the [AWS S3 Connector](https://docs.microstream.one/manual/storage/storage-targets/blob-stores/aws-s3.html) of MicroStream but for IBM COS instead of AWS S3.
 
 ## Installation
 
