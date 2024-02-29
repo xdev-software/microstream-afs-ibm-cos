@@ -25,7 +25,7 @@
 
 		<mainClass>software.xdev.Application</mainClass>
 
-		<one.microstream.version>08.01.01-MS-GA</one.microstream.version>
+		<one.microstream.version>08.01.02-MS-GA</one.microstream.version>
 	</properties>
 
 	<dependencies>
